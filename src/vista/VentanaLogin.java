@@ -5,6 +5,8 @@
  */
 package vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Shonny
@@ -16,6 +18,7 @@ public class VentanaLogin extends javax.swing.JFrame {
      */
     public VentanaLogin() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -142,6 +145,20 @@ public class VentanaLogin extends javax.swing.JFrame {
 
     private void jLRegistrarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarUsuarioMouseClicked
         // TODO add your handling code here:
+        VentanaCrearCliente ventanCliente = new VentanaCrearCliente() {
+            //Con esto cuando llamemos a dispose de vNueva abrimos la principal
+            @Override
+            public void dispose() {
+                //Hacemos visible la ventana cliente
+                getFrame().setVisible(true);
+                //Cerramos ventana cliente
+                super.dispose();
+            }
+        };
+        //Hacemos visible a login
+        ventanCliente.setVisible(true);
+        //Cerramos el login
+        dispose();
     }//GEN-LAST:event_jLRegistrarUsuarioMouseClicked
 
     private void jLRegistrarEmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarEmpresaMouseClicked
@@ -194,4 +211,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+private JFrame getFrame() {
+        return this;
+    }
 }
