@@ -54,7 +54,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-<<<<<<< HEAD
         jBagregarUsuario = new javax.swing.JButton();
         jTnombreUsuario = new javax.swing.JTextField();
         jTapellidoUsuario = new javax.swing.JTextField();
@@ -66,19 +65,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
         jTpreguntaCrearUsuario = new javax.swing.JTextField();
         jTrespuestaUsuario = new javax.swing.JTextField();
         jPasswordUsuario = new javax.swing.JPasswordField();
-=======
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField9 = new javax.swing.JTextField();
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,16 +97,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
         jCsexoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
-=======
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
 
         jPasswordUsuario.setText("jPasswordField1");
 
@@ -165,15 +142,9 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
                             .addComponent(jTpreguntaCrearUsuario)
                             .addComponent(jTrespuestaUsuario)
                             .addComponent(jPasswordUsuario))))
-=======
-                            .addComponent(jTextField7)
-                            .addComponent(jTextField9)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -215,11 +186,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-<<<<<<< HEAD
                     .addComponent(jTpreguntaCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-=======
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -249,7 +216,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void jBagregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBagregarUsuarioActionPerformed
         // TODO add your handling code here:
         String nombres = jTnombreUsuario.getText();
@@ -299,11 +265,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(null, "No se puede agregar el Cliente");
 //        }
     }//GEN-LAST:event_jBagregarUsuarioActionPerformed
-=======
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
 
     /**
      * @param args the command line arguments
@@ -341,16 +302,9 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     private javax.swing.JButton jBagregarUsuario;
     private javax.swing.JComboBox<String> jCsexoUsuario;
     private com.toedter.calendar.JDateChooser jDateFechaNacimiento;
-=======
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -362,7 +316,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-<<<<<<< HEAD
     private javax.swing.JPasswordField jPasswordUsuario;
     private javax.swing.JTextField jTapellidoUsuario;
     private javax.swing.JTextField jTcedulaUsuario;
@@ -371,15 +324,6 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     private javax.swing.JTextField jTpreguntaCrearUsuario;
     private javax.swing.JTextField jTrespuestaUsuario;
     private javax.swing.JTextField jTusuarioCrearUsuario;
-=======
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
->>>>>>> 87d17267dbad38d72c117d5c8e18091dc62930b6
     // End of variables declaration//GEN-END:variables
 
     public void cerrar() {
