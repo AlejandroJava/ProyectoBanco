@@ -5,7 +5,8 @@
  */
 package proyectobanco;
 
-import vista.VentanaLogin;
+import vista.VentanaPrincipal;
+
 
 /**
  *
@@ -18,7 +19,7 @@ public class ProyectoBanco {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        VentanaLogin.main(args);
+        VentanaPrincipal.main(args);
     }
     
 }

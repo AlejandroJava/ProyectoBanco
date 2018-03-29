@@ -5,9 +5,15 @@
  */
 package vista;
 
+import Enumeracion.Permiso;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import logica.Banco;
+import logica.Cliente;
 
 /**
  *
@@ -15,10 +21,14 @@ import javax.swing.JFrame;
  */
 public class VentanaCrearCliente extends javax.swing.JFrame {
 
+    private Banco miBanco;
+    private Cliente miCliente;
+
     /**
      * Creates new form VentanaCrearCliente
      */
-    public VentanaCrearCliente() {
+    public VentanaCrearCliente(Banco ban) {
+        miBanco = ban;
         initComponents();
         setLocationRelativeTo(null);
         cerrar();
@@ -44,17 +54,17 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jBagregarUsuario = new javax.swing.JButton();
+        jTnombreUsuario = new javax.swing.JTextField();
+        jTapellidoUsuario = new javax.swing.JTextField();
+        jTcedulaUsuario = new javax.swing.JTextField();
+        jCsexoUsuario = new javax.swing.JComboBox<>();
+        jTemailUsuario = new javax.swing.JTextField();
+        jDateFechaNacimiento = new com.toedter.calendar.JDateChooser();
+        jTusuarioCrearUsuario = new javax.swing.JTextField();
+        jTpreguntaCrearUsuario = new javax.swing.JTextField();
+        jTrespuestaUsuario = new javax.swing.JTextField();
+        jPasswordUsuario = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,25 +90,16 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
 
         jLabel11.setText("Respuesta:");
 
-        jButton1.setText("jButton1");
+        jBagregarUsuario.setText("Agregar Usuario");
+        jBagregarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBagregarUsuarioActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setText("jTextField1");
+        jCsexoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hombre", "Mujer" }));
 
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jTextField5.setText("jTextField5");
-
-        jTextField6.setText("jTextField6");
-
-        jTextField7.setText("jTextField7");
-
-        jTextField8.setText("jTextField8");
-
-        jTextField9.setText("jTextField9");
+        jPasswordUsuario.setText("jPasswordField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,7 +108,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBagregarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -115,25 +116,25 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3)))
+                            .addComponent(jTnombreUsuario)
+                            .addComponent(jTapellidoUsuario)
+                            .addComponent(jTcedulaUsuario)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(36, 36, 36)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jCsexoUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(36, 36, 36)
-                        .addComponent(jTextField5))
+                        .addComponent(jTemailUsuario))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))
+                        .addComponent(jDateFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(38, 38, 38)
-                        .addComponent(jTextField6))
+                        .addComponent(jTusuarioCrearUsuario))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
@@ -141,9 +142,9 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField7)
-                            .addComponent(jTextField8)
-                            .addComponent(jTextField9))))
+                            .addComponent(jTpreguntaCrearUsuario)
+                            .addComponent(jTrespuestaUsuario)
+                            .addComponent(jPasswordUsuario))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -154,44 +155,44 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTnombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTapellidoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTcedulaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCsexoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTemailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel7))
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTusuarioCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPasswordUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTpreguntaCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTrespuestaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(jBagregarUsuario)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -214,6 +215,56 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBagregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBagregarUsuarioActionPerformed
+        // TODO add your handling code here:
+        String nombres = jTnombreUsuario.getText();
+        System.out.println(nombres);
+        
+        String apellidos = jTapellidoUsuario.getText();
+        System.out.println(apellidos);
+        
+        String cedula = jTcedulaUsuario.getText();
+        System.out.println(cedula);
+        
+        String sexo = (String) jCsexoUsuario.getSelectedItem();
+        System.out.println(sexo);
+        
+        String email = jTemailUsuario.getText();
+        System.out.println(email);
+        
+        Date fechaCumpleanios= jDateFechaNacimiento.getCalendar().getTime();
+//        SimpleDateFormat fecha = new SimpleDateFormat();
+        System.out.println(fechaCumpleanios);
+        
+        String usuario = jTusuarioCrearUsuario.getText();
+        System.out.println(usuario);
+        
+        char[] obtenerPassword = jPasswordUsuario.getPassword();
+        String password = "";
+        for (int i = 0; i < obtenerPassword.length; i++) {
+            password += obtenerPassword[i];
+        }
+        System.out.println(password);
+        
+        String preguntaSeguridad = jTpreguntaCrearUsuario.getText();
+        System.out.println(preguntaSeguridad);
+        
+        String respuestaUsuario = jTrespuestaUsuario.getText();
+        System.out.println(respuestaUsuario);
+
+        miCliente = new Cliente(nombres, apellidos, cedula, sexo, email, fechaCumpleanios, usuario, password, preguntaSeguridad, respuestaUsuario, Permiso.CLIENTE);
+
+        //llamamos el metodo agregar cliente
+        boolean agregarClient = miBanco.agregarCliente(miCliente);
+        
+        //Mostramos mensaje de que se agrego o no el Cliente
+//        if (agregarClient) {
+//            JOptionPane.showMessageDialog(null, "El Cliente se agrego");
+//        } else {
+//            JOptionPane.showMessageDialog(null, "No se puede agregar el Cliente");
+//        }
+    }//GEN-LAST:event_jBagregarUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,15 +296,15 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaCrearCliente().setVisible(true);
+                new VentanaCrearCliente(null).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JButton jBagregarUsuario;
+    private javax.swing.JComboBox<String> jCsexoUsuario;
+    private com.toedter.calendar.JDateChooser jDateFechaNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -265,14 +316,14 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JPasswordField jPasswordUsuario;
+    private javax.swing.JTextField jTapellidoUsuario;
+    private javax.swing.JTextField jTcedulaUsuario;
+    private javax.swing.JTextField jTemailUsuario;
+    private javax.swing.JTextField jTnombreUsuario;
+    private javax.swing.JTextField jTpreguntaCrearUsuario;
+    private javax.swing.JTextField jTrespuestaUsuario;
+    private javax.swing.JTextField jTusuarioCrearUsuario;
     // End of variables declaration//GEN-END:variables
 
     public void cerrar() {
@@ -292,7 +343,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     }
 
     public void codigoSalida() {
-       VentanaLogin ventanLogin = new VentanaLogin();
-       ventanLogin.setVisible(true);
+        VentanaLogin ventanLogin = new VentanaLogin();
+        ventanLogin.setVisible(true);
     }
 }

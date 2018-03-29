@@ -146,7 +146,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     private void jLRegistrarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarUsuarioMouseClicked
         // TODO add your handling code here:
         setVisible(false);
-        VentanaCrearCliente ventanaCrearCliente = new VentanaCrearCliente();
+        VentanaCrearCliente ventanaCrearCliente = new VentanaCrearCliente(null);
         ventanaCrearCliente.setVisible(true);
     }//GEN-LAST:event_jLRegistrarUsuarioMouseClicked
 

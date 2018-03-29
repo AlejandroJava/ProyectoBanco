@@ -19,17 +19,17 @@ public class Cliente extends Usuario{
     private int edad;
     private String sexo;
     private String email;
-    private Date fechaCumpleaños;
+    private Date fechaCumpleanios;
 
-    public Cliente(String nombres, String apellidos, String cedula, int edad, String sexo, String email, Date fechaCumpleaños, String usuario, String password, String preguntaSeguridad, String respuesta, Permiso permisos) {
+    public Cliente(String nombres, String apellidos, String cedula, String sexo, String email, Date fechaCumpleanios, String usuario, String password, String preguntaSeguridad, String respuesta, Permiso permisos) {
         super(usuario, password, preguntaSeguridad, respuesta, permisos);
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
-        this.edad = edad;
+        //this.edad = edad;// ojo calcular la edad
         this.sexo = sexo;
         this.email = email;
-        this.fechaCumpleaños = fechaCumpleaños;
+        this.fechaCumpleanios = fechaCumpleanios;
     }
 
     
@@ -80,6 +80,14 @@ public class Cliente extends Usuario{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Date getFechaCumpleanios() {
+        return fechaCumpleanios;
+    }
+
+    public void setFechaCumpleanios(Date fechaCumpleanios) {
+        this.fechaCumpleanios = fechaCumpleanios;
     }
     
     

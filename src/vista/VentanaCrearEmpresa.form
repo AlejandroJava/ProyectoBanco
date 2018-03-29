@@ -67,7 +67,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jTpreguntaCrearEmpresa" alignment="1" max="32767" attributes="0"/>
                               <Component id="jTrespuestaCrearEmpresa" max="32767" attributes="0"/>
-                              <Component id="jPcontrasenia" alignment="0" pref="266" max="32767" attributes="0"/>
+                              <Component id="jPcontraseniaEmpresa" alignment="0" pref="266" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -112,7 +112,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPcontrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPcontraseniaEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -148,9 +148,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTusuarioEmpresa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField6"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -163,9 +160,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTpreguntaCrearEmpresa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField8"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -173,26 +167,17 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTrespuestaCrearEmpresa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField9"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTrazonSocial">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTNIT">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
+            <Property name="text" type="java.lang.String" value="Crear Empresa"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPcontrasenia">
+        <Component class="javax.swing.JPasswordField" name="jPcontraseniaEmpresa">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>

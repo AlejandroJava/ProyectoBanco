@@ -41,7 +41,7 @@ public class VentanaCrearEmpresa extends javax.swing.JFrame {
         jTrazonSocial = new javax.swing.JTextField();
         jTNIT = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jPcontrasenia = new javax.swing.JPasswordField();
+        jPcontraseniaEmpresa = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,25 +53,15 @@ public class VentanaCrearEmpresa extends javax.swing.JFrame {
 
         jLabel8.setText("Usuario:");
 
-        jTusuarioEmpresa.setText("jTextField6");
-
         jLabel9.setText("Contraseña:");
 
         jLabel10.setText("Pregunta:");
 
-        jTpreguntaCrearEmpresa.setText("jTextField8");
-
         jLabel11.setText("Respuesta:");
 
-        jTrespuestaCrearEmpresa.setText("jTextField9");
+        jButton1.setText("Crear Empresa");
 
-        jTrazonSocial.setText("jTextField1");
-
-        jTNIT.setText("jTextField2");
-
-        jButton1.setText("jButton1");
-
-        jPcontrasenia.setText("jPasswordField1");
+        jPcontraseniaEmpresa.setText("jPasswordField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,7 +80,7 @@ public class VentanaCrearEmpresa extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTpreguntaCrearEmpresa, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTrespuestaCrearEmpresa)
-                            .addComponent(jPcontrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)))
+                            .addComponent(jPcontraseniaEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -123,7 +113,7 @@ public class VentanaCrearEmpresa extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jPcontrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPcontraseniaEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -201,7 +191,7 @@ public class VentanaCrearEmpresa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPcontrasenia;
+    private javax.swing.JPasswordField jPcontraseniaEmpresa;
     private javax.swing.JTextField jTNIT;
     private javax.swing.JTextField jTpreguntaCrearEmpresa;
     private javax.swing.JTextField jTrazonSocial;

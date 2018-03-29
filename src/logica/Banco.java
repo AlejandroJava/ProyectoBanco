@@ -29,6 +29,15 @@ public class Banco {
         }
         return null;
     }
+//    public Cliente buscarCliente(String id) {
+//        for (int i = 0; i < clientes.size(); i++) {
+//            Cliente partido = clientes.get(i);
+//            if (id.equals(partido.getCedula())) {
+//                return partido;
+//            }
+//        }
+//        return null;
+//    }
 
     public boolean agregarCliente(Cliente client) {
         String ident = client.getCedula();
@@ -41,6 +50,7 @@ public class Banco {
             return false;
         }
     }
+    
 
     public Empresa buscarEmpresa(String nit) {
         for (Empresa empresa : empresas) {
