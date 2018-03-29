@@ -145,24 +145,16 @@ public class VentanaLogin extends javax.swing.JFrame {
 
     private void jLRegistrarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarUsuarioMouseClicked
         // TODO add your handling code here:
-        VentanaCrearCliente ventanCliente = new VentanaCrearCliente() {
-            //Con esto cuando llamemos a dispose de vNueva abrimos la principal
-            @Override
-            public void dispose() {
-                //Hacemos visible la ventana cliente
-                getFrame().setVisible(true);
-                //Cerramos ventana cliente
-                super.dispose();
-            }
-        };
-        //Hacemos visible a login
-        ventanCliente.setVisible(true);
-        //Cerramos el login
-        dispose();
+        setVisible(false);
+        VentanaCrearCliente ventanaCrearCliente = new VentanaCrearCliente();
+        ventanaCrearCliente.setVisible(true);
     }//GEN-LAST:event_jLRegistrarUsuarioMouseClicked
 
     private void jLRegistrarEmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarEmpresaMouseClicked
         // TODO add your handling code here:
+        setVisible(false);
+        VentanaCrearEmpresa ventanaCrearEmpresa = new VentanaCrearEmpresa();
+        ventanaCrearEmpresa.setVisible(true);
     }//GEN-LAST:event_jLRegistrarEmpresaMouseClicked
 
     /**

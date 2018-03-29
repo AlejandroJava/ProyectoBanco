@@ -11,10 +11,10 @@ import java.util.Date;
  *
  * @author Shonny
  */
-public class Fecha {
+public class FechaCreacion {
     private Date fecha;
 
-    public Fecha(Date fecha) {
+    public FechaCreacion(Date fecha) {
         this.fecha = fecha;
     }
     

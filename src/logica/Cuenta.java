@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Shonny
  */
-public class Cuenta extends Fecha{
+public class Cuenta extends FechaCreacion{
     private String numeroBancario;
 
     public Cuenta(String numeroBancario, Date fecha) {

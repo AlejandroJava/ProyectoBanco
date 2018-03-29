@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 
 /**
@@ -19,6 +21,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     public VentanaCrearCliente() {
         initComponents();
         setLocationRelativeTo(null);
+        cerrar();
     }
 
     /**
@@ -272,4 +275,24 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
+    public void cerrar() {
+        try {
+            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(WindowEvent e) {
+                    codigoSalida();
+                }
+            });
+            this.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+    }
+
+    public void codigoSalida() {
+       VentanaLogin ventanLogin = new VentanaLogin();
+       ventanLogin.setVisible(true);
+    }
 }

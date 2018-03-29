@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Shonny
  */
-public class CDTs extends Fecha{
+public class CDTs extends FechaCreacion{
     private double montoInversion;
     private int porcentajeInteresPagado;
     private double pagoMensual;
