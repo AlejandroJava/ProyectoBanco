@@ -73,7 +73,7 @@
                                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jBIniciarSesion" max="32767" attributes="0"/>
-                                      <Component id="jLRegistrarEmpresa1" max="32767" attributes="0"/>
+                                      <Component id="jLVerificarContrasenia" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -105,7 +105,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jBIniciarSesion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLRegistrarEmpresa1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLVerificarContrasenia" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="22" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLRegistrarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -173,7 +173,7 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLRegistrarEmpresaMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLRegistrarEmpresa1">
+        <Component class="javax.swing.JLabel" name="jLVerificarContrasenia">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Recuperar Contrase&#xf1;a"/>
@@ -181,8 +181,11 @@
               <Color id="Cursor de Mano"/>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Verificar Contrase&#xf1;a"/>
+          </AccessibilityProperties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLRegistrarEmpresa1MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLVerificarContraseniaMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>

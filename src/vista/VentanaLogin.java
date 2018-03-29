@@ -38,7 +38,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLRegistrarEmpresa = new javax.swing.JLabel();
-        jLRegistrarEmpresa1 = new javax.swing.JLabel();
+        jLVerificarContrasenia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,12 +76,12 @@ public class VentanaLogin extends javax.swing.JFrame {
             }
         });
 
-        jLRegistrarEmpresa1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLRegistrarEmpresa1.setText("Recuperar Contraseña");
-        jLRegistrarEmpresa1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLRegistrarEmpresa1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLVerificarContrasenia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLVerificarContrasenia.setText("Recuperar Contraseña");
+        jLVerificarContrasenia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLVerificarContrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLRegistrarEmpresa1MouseClicked(evt);
+                jLVerificarContraseniaMouseClicked(evt);
             }
         });
 
@@ -106,7 +106,7 @@ public class VentanaLogin extends javax.swing.JFrame {
                                 .addGap(100, 100, 100)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jBIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLRegistrarEmpresa1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jLVerificarContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(0, 58, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLRegistrarUsuario)
@@ -128,13 +128,15 @@ public class VentanaLogin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jBIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLRegistrarEmpresa1)
+                .addComponent(jLVerificarContrasenia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRegistrarUsuario)
                     .addComponent(jLRegistrarEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
+
+        jLVerificarContrasenia.getAccessibleContext().setAccessibleName("Verificar Contraseña");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -174,9 +176,11 @@ public class VentanaLogin extends javax.swing.JFrame {
         ventanaCrearEmpresa.setVisible(true);
     }//GEN-LAST:event_jLRegistrarEmpresaMouseClicked
 
-    private void jLRegistrarEmpresa1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarEmpresa1MouseClicked
+    private void jLVerificarContraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVerificarContraseniaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLRegistrarEmpresa1MouseClicked
+        setVisible(false);
+        
+    }//GEN-LAST:event_jLVerificarContraseniaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -217,8 +221,8 @@ public class VentanaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBIniciarSesion;
     private javax.swing.JLabel jLRegistrarEmpresa;
-    private javax.swing.JLabel jLRegistrarEmpresa1;
     private javax.swing.JLabel jLRegistrarUsuario;
+    private javax.swing.JLabel jLVerificarContrasenia;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
