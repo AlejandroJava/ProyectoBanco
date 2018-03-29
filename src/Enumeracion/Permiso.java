@@ -9,6 +9,6 @@ package Enumeracion;
  *
  * @author Shonny ,alejandro
  */
-public enum Permiso {
+public enum Permiso { 
     ADMIN,EMPRESA,CLIENTE
 }
