@@ -384,6 +384,7 @@ public class VentanaCrearCliente extends javax.swing.JFrame {
 
     public void cerrar() {
         try {
+            
             this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             addWindowListener(new WindowAdapter() {
                 @Override
