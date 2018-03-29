@@ -7,7 +7,7 @@ package Enumeracion;
 
 /**
  *
- * @author Shonny
+ * @author Shonny ,alejandro
  */
 public enum Permiso {
     ADMIN,EMPRESA,CLIENTE

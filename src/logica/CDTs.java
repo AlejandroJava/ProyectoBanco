@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Shonny
+ * @author Shonny, alejandro
  */
 public class CDTs extends Fecha{
     private double montoInversion;

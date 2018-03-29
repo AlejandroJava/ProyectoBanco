@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Shonny
+ * @author Shonny, alejandro
  */
 public class Ahorro extends Cuenta{
     private Date fechaRetiroAhorros;

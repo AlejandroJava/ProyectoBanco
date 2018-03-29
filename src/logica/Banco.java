@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Shonny
+ * @author Shonny, alejandro
  */
 public class Banco {
 
